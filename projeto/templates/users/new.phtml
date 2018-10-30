@@ -1,0 +1,11 @@
+{% extends "layouts/admin.phtml" %}
+
+{% block content %}
+<h3>Novo usuario</h3>
+<form action="/admin/users/new" method="post" accept-charset="utf-8">
+	<p><input type="text" name="email"></p>
+	<p><input type="password" name="password"></p>
+	<input type="submit" value="Salvar">
+</form>
+
+{% endblock %}

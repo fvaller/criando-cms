@@ -1,0 +1,14 @@
+{% extends "layouts/admin.phtml" %}
+
+{% block content %}
+<h3>Editar usuario: {{ user.email }}</h3>
+<form action="/admin/users/edit/{{ user.id }}" method="post" accept-charset="utf-8">	
+	<p><input type="text" name="email" value="{{ user.email }}"></p>
+	<p>
+		<input type="password" name="password" value="" >
+		<small>Informe um nova senha apenas se desejar muda-lá</small>
+	</p>	
+	<input type="submit" value="Salvar" >
+</form>
+
+{% endblock %}

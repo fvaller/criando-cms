@@ -1,0 +1,25 @@
+{% extends "layouts/admin.phtml" %}
+
+{% block content %}
+<h3>Usuario</h3>
+
+<table>	
+	<tbody>
+		<tr>
+			<td>ID</td>
+			<td>{{ user.id }}</td>			
+		</tr>
+
+		<tr>
+			<td>E-mail</td>
+			<td>{{ user.email }}</td>			
+		</tr>		
+
+		<tr>
+			<td>Senha</td>
+			<td>{{ user.password }}</td>			
+		</tr>
+	</tbody>
+</table>
+
+{% endblock %}

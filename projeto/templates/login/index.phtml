@@ -1,0 +1,9 @@
+<h3>Login</h3>
+<form action="/admin/login" method="post" accept-charset="utf-8">	
+	<input type="text" name="email" value="{{ user.email }}">
+	<input type="password" name="password" value="{{ user.password }}" >
+	<input type="submit" value="Salvar" >
+</form>
+<pre>
+	{{ dump(user) }}
+</pre>

@@ -1,0 +1,39 @@
+{% extends "layouts/admin.phtml" %}
+
+{% block content %}
+<h3>Usuarios</h3>
+<a href="/admin/users/new" class="button">Novo Usuario</a>
+<hr>
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Email</th>
+			<th>Senha</th>
+			<th colspan="2">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+
+		{% for user in users %}
+		<tr>
+			<td>{{ user.id }}</td>
+			<td>{{ user.email }}</td>			
+			<td>{{ user.password }}</td>			
+			<td><a href="/admin/users/{{ user.id }}" class="button">Ver</a></td>			
+			<td><a href="/admin/users/edit/{{ user.id }}" class="button">Editar</a></td>
+			<td>
+				<form action="/admin/users/delete/{{ user.id }}" method="post">
+					<input type="submit" value="Deletar" class="button" />
+				</form>
+			</td>
+		</tr>
+		{% else %}
+		<tr>
+			<td colspan="4">Sem registros</td>
+		</tr>		
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}

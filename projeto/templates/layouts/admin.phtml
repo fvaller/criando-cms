@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ADMIN - Curso CMS PHP - School Of Net</title>
+	<link rel="stylesheet" href="https://unpkg.com/chota@latest">
+</head>
+<body>
+	<div class="container">
+
+		<nav class="nav">
+			<div class="nav-left">
+				<a class="brand" href="/admin/users">ADMIN CMS</a>
+				<div class="tabs">
+					<a href="/admin/pages">Paginas</a>
+					<a href="/admin/users">Usuarios</a>								
+				</div>
+			</div>
+			<div class="nav-right">
+				<a href="/">Ver Site</a>
+			</div>
+		</nav>
+		
+		<hr>
+
+		<div class="row">
+			<div class="col">{% block content %}{% endblock %}</div>
+		</div>
+	</div> <!-- container -->		
+</body>
+</html>

@@ -1,0 +1,125 @@
+<?php
+
+/* users/index.phtml */
+class __TwigTemplate_731dc5b221b242bfcce75fcfbf63140c36f15cecfab87d0ba5087c18011f49c8 extends Twig_Template
+{
+    private $source;
+
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        // line 1
+        $this->parent = $this->loadTemplate("layouts/admin.phtml", "users/index.phtml", 1);
+        $this->blocks = array(
+            'content' => array($this, 'block_content'),
+        );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "layouts/admin.phtml";
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 3
+    public function block_content($context, array $blocks = array())
+    {
+        // line 4
+        echo "<h3>Usuarios</h3>
+<a href=\"/admin/users/new\" class=\"button\">Novo Usuario</a>
+<hr>
+<table class=\"table\">
+\t<thead>
+\t\t<tr>
+\t\t\t<th>ID</th>
+\t\t\t<th>Email</th>
+\t\t\t<th>Senha</th>
+\t\t\t<th colspan=\"2\">Action</th>
+\t\t</tr>
+\t</thead>
+\t<tbody>
+
+\t\t";
+        // line 18
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["users"] ?? null));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
+            // line 19
+            echo "\t\t<tr>
+\t\t\t<td>";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
+            echo "</td>
+\t\t\t<td>";
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", array()), "html", null, true);
+            echo "</td>\t\t\t
+\t\t\t<td>";
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "password", array()), "html", null, true);
+            echo "</td>\t\t\t
+\t\t\t<td><a href=\"/admin/users/";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
+            echo "\">Ver</a></td>\t\t\t
+\t\t\t<td><a href=\"/admin/users/edit/";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
+            echo "\">Editar</a></td>
+\t\t\t<td>
+\t\t\t\t<form action=\"/admin/users/delete/";
+            // line 26
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", array()), "html", null, true);
+            echo "\" method=\"post\">
+\t\t\t\t\t<input type=\"submit\" value=\"Deletar\" />
+\t\t\t\t</form>
+\t\t\t</td>
+\t\t</tr>
+\t\t";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 32
+            echo "\t\t<tr>
+\t\t\t<td colspan=\"4\">Sem registros</td>
+\t\t</tr>\t\t
+\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 36
+        echo "\t</tbody>
+</table>
+
+";
+    }
+
+    public function getTemplateName()
+    {
+        return "users/index.phtml";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  100 => 36,  91 => 32,  80 => 26,  75 => 24,  71 => 23,  67 => 22,  63 => 21,  59 => 20,  56 => 19,  51 => 18,  35 => 4,  32 => 3,  15 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Twig_Source("", "users/index.phtml", "D:\\Desenvolvimento\\Web\\www\\cursos\\criando-cms\\projeto\\templates\\users\\index.phtml");
+    }
+}
